@@ -83,6 +83,14 @@ function createDateDiv(date){
 	return outerDiv;
 }
 
+function stayFocused(id){
+	var selected = document.getElementById(id);
+	var value = selected.children[0].value;
+	if(value != "")
+		selected.classList.add("focused-input-box-2");
+	else if(selected.classList.contains("focused-input-box-2"))
+		selected.classList.remove("focused-input-box-2");
+}
 
 
 /*
@@ -109,6 +117,6 @@ function createDateDiv(date){
 
 
 setTimeout(function(){
-	activate(0);
+	activate(1);
 	getClipboard();
 },123);

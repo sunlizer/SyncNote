@@ -15,13 +15,13 @@ body {
 
 .icon-bar .nav-options {
     float: left;
-    width: 100px !important;
+    width: 100px;
     text-align: center;
     padding: 10px 0;
     transition: all 0.3s ease;
     color: white;
     font-size: 30px;
-    width: 30px
+    height: 30px;
 }
 
 .icon-bar .outer-div:hover {
@@ -49,7 +49,7 @@ body {
 .frame{
     float:left;
     border: 2px solid #555;
-    border-radius: 12px;
+    border-radius: 7px;
     width: 396px;
     height: 296px;
     position: absolute;
@@ -162,3 +162,214 @@ body {
 }
 
 
+
+
+
+/*textboxes css*/
+.input--hoshi {
+    overflow: hidden;
+    border:none;
+}
+
+.input__field--hoshi {
+    margin-top: 1em;
+    padding: 0.85em 0.15em;
+    width: 100%;
+    background: transparent;
+    color: #595F6E;
+    border:none;
+}
+
+
+.input__field--hoshi:focus {
+    border:none;
+}
+
+
+.input__label--hoshi {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.25em;
+    width: 100%;
+    height: calc(100% - 1em);
+    text-align: left;
+    pointer-events: none;
+}
+
+.input__label-content--hoshi {
+    position: absolute;
+}
+
+.input__label--hoshi::before,
+.input__label--hoshi::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 10px);
+    border-bottom: 1px solid #B9C1CA;
+}
+
+.input__label--hoshi::after {
+    margin-top: 2px;
+    border-bottom: 4px solid red;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.input__label--hoshi-color-1::after {
+    border-color: hsl(200, 100%, 50%);
+}
+
+.input__label--hoshi-color-2::after {
+    border-color: hsl(160, 100%, 50%);
+}
+
+.input__label--hoshi-color-3::after {
+    border-color: hsl(20, 100%, 50%);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi {
+    -webkit-animation: anim-1 0.3s forwards;
+    animation: anim-1 0.3s forwards;
+}
+
+@-webkit-keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+    }
+}
+
+@keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+    }
+}
+
+
+
+
+
+/*****************************/
+.input-box-2{
+    width: 193px;
+    height: 30px;
+    float: left;
+    margin-top: 10px;
+}
+.input-box-2 input{
+    width: 94%;
+    border: none;
+    height: 30px;
+    text-indent: 8px;
+    border-bottom: 1px solid #B9C1CA;
+}
+
+input:focus{
+    outline: none;
+
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+  text-indent: 3px;
+}
+input:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+  text-indent: -30px; 
+}
+/*background: #f7ecec*/
+.input-row{
+    background: red;
+}
+
+.input-box-2::after{
+    transition: all 1s ease;
+    position: relative;
+    left: 8px;
+    top: -25px;
+    content: attr(data-placeholder);
+    font-size: 20px;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.input-box-2:focus-within::after, .focused-input-box-2::after{
+     top: -37.45px;
+     font-size: 12px;
+     font-weight: bold;
+     color: hsl(200, 100%, 50%);
+}
+
+.size-2{
+    width: 250px;
+}
+
+.input-box-2::before{    
+    display: block;
+    transition: all 1s ease;
+    position: relative;
+    left: 0px;
+    top: 30px;
+    content: "";
+    height: 3px;
+    width: 0%;
+}
+
+#title-input::before {
+    background: hsl(200, 100%, 50%);
+}
+
+#url-input::before {
+    background: hsl(160, 100%, 50%);
+}
+
+.color-1 {
+    color: hsl(200, 100%, 50%);
+}
+
+.color-2 {
+    color: hsl(160, 100%, 50%);
+}
+.color-3 {
+    color: hsl(20, 100%, 50%);
+}
+
+.input-box-2:focus-within::before , .focused-input-box-2::before{
+    width: 95%;
+}

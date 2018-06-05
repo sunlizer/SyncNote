@@ -17,33 +17,29 @@
 
 		<div class="frame-holder">
 			<div class="frame" style="left: -1200px;">
-				
 				<div class="messages">
-<!--
-					<div class="daily-messages">
-						<div class="message-date"><div>10/01/1992</div></div>
-						<div class="message">
-							<div class="message-content-text">
-								<div> message content</div>
-								<span>10:01</span>
-							</div>
-						</div>
-
-						<div class="message">
-							<div class="message-content-image" style="background-image: url('testData/pic_1.PNG');">
-								<span>10:01</span>
-							</div>
-						</div>
-					</div>-->
-
+					<!-- this part would be filled after json -->
 				</div>
-
 			</div>
-
-
-
-
-			<div class="frame" style="left: -800px">  content 2</div>
+			<div class="frame" style="left: -800px">
+				<div class="input-row">
+					<div class="input-box-2" id="title-input" onchange="stayFocused('title-input')" data-placeholder="Title :">
+						<input type="text" name="title" />
+					</div>
+				</div>
+				<div class="input-row">
+					<div class="input-box-2" id="folder-input" onchange="stayFocused('folder-input')" data-placeholder="Folder :">
+						<input type="text" name="folder" />
+					</div>
+				</div>				
+				<div class="input-row">
+					<div class="input-row">
+						<div class="input-box-2 size-2" id="url-input" onchange="stayFocused('url-input')" data-placeholder="URL :">
+							<input type="text" name="url" />
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="frame" style="left: -400px">  content 3</div>
 			<div class="frame" style="left: 0">		  content 4</div>
 		</div>
